@@ -38,14 +38,11 @@ let monthlyRate = numerator/denominator;
 If your name is `Oscar` mortgageCalculator() should return "Oscar, your monthly rate is 1073.64"
 */
 function mortgageCalculator(){
-    let mortgage = name + ', your monthly rate is ';
+    let mortgage = name + ', your monthly rate is $';
     let statement = mortgage + monthlyRate;
     return statement;
 }
-console.log(mortgageCalculator())
-// console.log(mortgageCalculator());
-
-
+console.log(mortgageCalculator());
 
 
 // 🏡 Task 4: Arguments and Parameters
@@ -54,7 +51,9 @@ console.log(mortgageCalculator())
 For example,
 mortgageCalculator(200000, 0.05, 30); <-- should return 1,073.64
 */
+function mortgageCalculator(principal, monthlyInterestRate, periods){
 
+}
 
 
 
@@ -86,7 +85,6 @@ For example, variableInterestRate(200000, 0.04, 30) should console.log:
 
 
 
-
 // 🌟🌟🌟 STRETCH 🌟🌟🌟//
 
 /* Attempt any of the stretch goals below once you have finished the work above. Remember as always, these may require additional research beyond what you learned today */
@@ -101,3 +99,9 @@ For example, variableInterestRate(200000, 0.04, 30) should console.log:
 
 
 /* 🏡  Refactor your `variableInterestRate()` function to accept an array of interest rates (make sure to copy and paste as to not lose your work!) */
+
+
+ //   function variableInterestRate(principal, interestRate, years) {
+ //   let minInterestRate = interestRate - 0.02;
+ //   let maxInterestRate = interestRate + 0.02;
+}
