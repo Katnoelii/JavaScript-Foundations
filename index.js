@@ -54,17 +54,13 @@ console.log(mortgageCalculator());
 For example,
 mortgageCalculator(200000, 0.05, 30); <-- should return 1,073.64
 */
-function newMortgageCalculator(principal,interestRate,Periods){
-    let monthlyInterestRate = interestRate/12;
-    let periods = years*12;
-    let numerator = principal*(monthlyInterestRate*Math.pow((1 + monthlyInterestRate), periods));
-    let denominator = (Math.pow((1 + monthlyInterestRate), periods) - 1);
-    let monthlyRate = numerator/denominator;
+function mortgageCalculator2(principal, interestRate, periods){
         let mortgage = name + ', your monthly rate is $';
         let statement = mortgage + monthlyRate.toFixed(2);
-      return statement;
+        return statement;
   }
-  console.log(newMortgageCalculator(100000,0.05,20));
+  const newPin = mortgageCalculator2(10000, 1.5, 20);
+  console.log(newPin);
 
 // 🏡 Task 5: Conditionals
 /* Add another paramter to your function called credit score. This parameter will be a number between 0 and 800 (a credit score).
@@ -72,17 +68,17 @@ Then, add control flow within your function such that IF creditScore is above 74
 interest rate increases by 0.5% and if credit score is anywhere between 660 and 740 interest rate doesn't change.
 */
 function newMortgageCalculator(principal, interestRate, years, creditScore){
-    let credit = 700;
+    let credit = Math.floor(Math.random() * 800);
 
     if(credit > 740) {
         interestRate -= 0.05.toFixed(2);
     }else if (credit < 660){
         interestRate +- 0.05;
+    }else{
+        interestRate
     }
     console.log('Credit Score=', credit);
     console.log('Interest Rate =',interestRate);
-
-    console.log(monthlyRate.toFixed(2));
 }
 
 // 🏡 Task 6: Loops
@@ -103,7 +99,7 @@ For example, variableInterestRate(200000, 0.04, 30) should console.log:
 "{Name}, with an interest rate of 0.06, your monthly rate is $1199"
 */
 function variableInterestRate (principal,interestRate,years,name) {
-     for (i = 1; i < 10; i++) {
+     for (i = 0; i < 9; i++) {
         name = 'Kate';
         let newRate = interestRate - 0.02;
         interestRate = interestRate + 0.005;
@@ -117,6 +113,7 @@ function variableInterestRate (principal,interestRate,years,name) {
     }
 }
 console.log(variableInterestRate(200000, 0.05, 30));
+
 
 
 // 🌟🌟🌟 STRETCH 🌟🌟🌟//
