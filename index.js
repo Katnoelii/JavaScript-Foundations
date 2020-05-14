@@ -73,19 +73,19 @@ interest rate increases by 0.5% and if credit score is anywhere between 660 and 
 */
 function newMortgageCalculator(principal, interestRate, years, creditScore){
     interestRate = 0.05;
-    let credit = Math.floor(Math.random() * 800);
+    // let creditScore = Math.floor(Math.random() * 800);
 
-    if(credit > 740) {
+    if(creditScore > 740) {
         interestRate -= 0.05.toFixed(2);
-    }else if (credit < 660){
+    }else if (creditScore < 660){
         interestRate += 0.05;
     }else {
         interestRate;
     }
-    console.log('Credit Score=',credit);
+    console.log('Credit Score=',creditScore);
     console.log('Interest Rate =',interestRate);
 }
-newMortgageCalculator();
+newMortgageCalculator(200000,0.05,30, 430);
 
 // 🏡 Task 6: Loops
 /* Write a new function called variableInterestRate. This function should be the same as mortgageCalculator, 
