@@ -8,6 +8,7 @@ let name = 'Kate';
 let principal = 200000;
 let interestRate = 0.05;
 let years = 30;
+
 // 🏡 Task 1.5: Simple Math
 /* To create a monthly mortgage rate calculator, we need to know the number of years in months and the monthly interest rate. 
 
@@ -70,8 +71,19 @@ function newMortgageCalculator(principal,interestRate,Periods){
 Then, add control flow within your function such that IF creditScore is above 740, interest rate drops by 0.5%, if credit score is below 660, 
 interest rate increases by 0.5% and if credit score is anywhere between 660 and 740 interest rate doesn't change.
 */
+function newMortgageCalculator(principal, interestRate, years, creditScore){
+    let credit = 700;
 
+    if(credit > 740) {
+        interestRate -= 0.05.toFixed(2);
+    }else if (credit < 660){
+        interestRate +- 0.05;
+    }
+    console.log('Credit Score=', credit);
+    console.log('Interest Rate =',interestRate);
 
+    console.log(monthlyRate.toFixed(2));
+}
 // 🏡 Task 6: Loops
 /* Write a new function called variableInterestRate. This function should be the same as mortgageCalculator, 
 except it should console.log the monthly payment for 10 different interest rates at 0.5% increments plus or minus 2% from the inputted interest rate.
