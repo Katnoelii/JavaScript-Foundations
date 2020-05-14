@@ -84,6 +84,7 @@ function newMortgageCalculator(principal, interestRate, years, creditScore){
 
     console.log(monthlyRate.toFixed(2));
 }
+
 // 🏡 Task 6: Loops
 /* Write a new function called variableInterestRate. This function should be the same as mortgageCalculator, 
 except it should console.log the monthly payment for 10 different interest rates at 0.5% increments plus or minus 2% from the inputted interest rate.
@@ -101,7 +102,21 @@ For example, variableInterestRate(200000, 0.04, 30) should console.log:
 "{Name}, with an interest rate of 0.055, your monthly rate is $1136"
 "{Name}, with an interest rate of 0.06, your monthly rate is $1199"
 */
-
+function variableInterestRate () {
+    let name = "Kate"
+    let principal = "200000";
+    let interestRate = "0.05";
+    let years = "30";
+    let monthlyInterestRate = (interestRate/12);
+    let periods = (years*12);
+    let numerator = principal * (monthlyInterestRate * Math.pow((1 + monthlyInterestRate), periods));
+    let denominator = Math.pow((1 + monthlyInterestRate),periods)-1;
+    monthlyRate = numerator / denominator;
+    for (i = 0; i < 10; i++) {
+        console.log( name + ", with an interest rate of ", + interestRate*1.05, "your monthly rate is $", monthlyRate*1.05);
+    }
+}
+console.log(variableInterestRate())
 
 
 // 🌟🌟🌟 STRETCH 🌟🌟🌟//
